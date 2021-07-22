@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="alm_asset" label="Checkbox" max_length="40" name="x_58872_needit_checkbox" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="MT1" label="Request type" mandatory="true" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element inactive_on_update="false" label="MyTeam1" sequence="0" value="MT1"/>
+                <element inactive_on_update="false" label="MyTeam2" sequence="1" value="MT2"/>
+                <element inactive_on_update="false" label="MyTeam3" sequence="2" value="MT3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="T1" label="What needed" mandatory="true" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Test1" sequence="0" value="T1"/>
+                <element inactive_on_update="false" label="Test2" sequence="1" value="T2"/>
+                <element inactive_on_update="false" label="Test3" sequence="2" value="T3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_reference_2" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_reference_2"/>
+        </index>
+    </element>
+</database>
